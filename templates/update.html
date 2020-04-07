@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Update</h1>
+      <p class="lead">***Let's Edit***</p>
+    </div>
+  </div>
+<form action='' method='POST'>{% csrf_token %}
+    {{form.as_p}} 
+    <input type='submit' value='Update'>
+</form>
+{% endblock content %}

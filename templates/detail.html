@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Details</h1>
+      <p class="lead">***About details of todo***</p>
+    </div>
+  </div>
+{% endblock %}  
+
+{% block content %}
+<div class='container'>
+    <a href="{% url 'update' object.pk %}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Edit</a>
+    <div class="alert alert-success" role="alert">
+       <p>Title:&ensp;<b>{{object.title}}</b></p>
+       <p>Details:&ensp;<b>{{object.memo}}</b></p>
+       <p>Until:&ensp;<b>{{object.duedate}}</b></p>
+       <a href="{% url 'list' %}" class="btn btn-light" tabindex="-1" role="button" aria-disabled="true">Back</a>
+    </div>
+
+
+</div>
+{% endblock content %}
