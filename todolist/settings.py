@@ -25,7 +25,7 @@ SECRET_KEY = 'wv9n@65s2z&&#rk15wfu^+o=)34(gdx3&xr7#ya8!^i4!iiee1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rainbowtaro.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
