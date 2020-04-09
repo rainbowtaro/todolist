@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 
 
 class Todolist(ListView):
-    template_name = 'list.html'
+    template_name = 'templates/list.html'
     model = TodoModel
 
 class Tododetail(DetailView):
