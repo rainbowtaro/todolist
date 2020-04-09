@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
 
-
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Create</h1>
+      <p class="lead">***Create New Todo***</p>
+    </div>
+  </div>
+{% endblock %}  
 {% block content %}
-<form action="" method="POST">{% csrf_token %}
-    {{form.as_p}} 
-    <input type="submit" value="Submit">
-</form>
+<div class="mx-auto" style="width: 400px;">
+    <div class="alert alert-primary" role="alert">
+        <form action="" method="POST">{% csrf_token %}
+            {{form.as_p}} 
+            <input type="submit" value="Submit">
+        </form>
+        <p></p>
+        <a href="{% url 'list' %}" class="btn btn-light" tabindex="-1" role="button" aria-disabled="true">Back</a>
+    </div>
+</div>
 {% endblock content %}

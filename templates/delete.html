@@ -12,11 +12,13 @@
 {% endblock %}  
 {% block content %}
 <div class="mx-auto" style="width: 300px;">
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-primary" role="alert">
         <form action='' method='POST'>{% csrf_token %}
             <p><b>Do you really delete this todo?</b></p>
             <input type='submit' value='Delete'>
         </form>
+        <p></p>
+        <a href="{% url 'list' %}" class="btn btn-light" tabindex="-1" role="button" aria-disabled="true">Back</a>
     </div>
 </div>
 {% endblock content %}
